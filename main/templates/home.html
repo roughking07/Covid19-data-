@@ -9,10 +9,10 @@
 <body>
     <style>
         body {
-            background-color: #232323;
+            background-color: rgb(45, 28, 92);
         }
         .data {
-    background-color: #232323;
+    background-color: rgb(45, 28, 88);
     color: ghostwhite;
 }
 .chart {
@@ -20,6 +20,9 @@
     
 }
     </style>
+    <div class="chart">
+        <canvas id="myChart"></canvas>
+      </div>
     <div class="data">
    <center> <table border="1">
         <thead>
@@ -46,9 +49,7 @@
     </div>
 
     </table></center>
-    <div class="chart">
-        <canvas id="myChart"></canvas>
-      </div>
+    
   <!--Chartjs-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript">
@@ -58,13 +59,13 @@ const data = {
   datasets: [{
     label: 'Covid 19 confirmed cases',
     backgroundColor: 'rgb(255, 99, 132)',
-    borderColor: 'rgb(255, 99, 132)',
+    borderColor: 'rgb(45, 28, 88)',
     data: {{chartdata | safe}},
   }]
 };
 
 const config = {
-  type: 'bar',
+  type: 'line',
   data,
   options: {}
 };
